@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html leng="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <script src="https://kit.fontawesome.com/cacf32ff12.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/jpg"
+        href="C:\Users\hp\Desktop\College\First Semester\Introduction To Web Technologies\Notepad ++ Files\Project\favicon.ico" />
+        
+<link rel="stylesheet" href="Profile CSS.css">
+</head>
+
+<body>
+
+    <nav class="navigation">
+        <a href="index.html" class="logo">
+
+            <span>SHree</span>BHandar
+
+        </a>
+    </nav>
+    <div class="container">
+        <div class="leftbox">
+            <nav>
+                <a onclick="tabs(0)" class="tab active">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a onclick="tabs(1)" class="tab">
+                    <i class="far fa-credit-card"></i>
+                </a>
+                <a onclick="tabs(2)" class="tab">
+                    <i class="fas fa-tv"></i>
+                </a>
+                <a onclick="tabs(3)" class="tab">
+                    <i class="fas fa-tasks"></i>
+                </a>
+                <a onclick="tabs(4)" class="tab">
+                    <i class="fas fa-cog"></i>
+                </a>
+            </nav>
+        </div>
+        <div class="rightbox">
+            <div class="profile tabShow">
+                <h1>Personal Information</h1>
+                <form action="/updateProfile" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="label">Name:</label><br>
+                        <input class="input" type="text" id="name" name="name" value="<%= preDefinedValues.name %>"
+                            required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender" class="label">Gender:</label><br>
+                        <select id="gender" name="gender" class="input">
+                            <option value="male" <% if (preDefinedValues.gender==='male' )>Male</option>
+                            <option value="female" <% if (preDefinedValues.gender==='female' )>Female</option>
+                            <option value="others" <% if (preDefinedValues.gender==='others' )>Others</option>
+                        </select><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="label">Email:</label><br>
+                        <input type="email" class="input" id="email" name="email" value="<%= preDefinedValues.email %>"
+                            required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="label">Password:</label><br>
+                        <input type="password" id="password" class="input" name="password" minlength="6"
+                            value="<%= preDefinedValues.password %>" required><br>
+                    </div>
+                    <button type="submit" class="btn">Update</button>
+                </form>
+            </div>
+
+            <div class="Payment tabShow">
+                <h1>Shipment Information</h1>
+                <form action="/updateShipmentInfo" method="POST">
+                    <div class="form-group">
+                        <label for="billingAddress" class="label">Billing Address:</label><br>
+                        <input type="text" class="input" id="billingAddress" name="billingAddress" value="<%= preDefinedValues.shipmentInfo.billingAddress %>" required><br>
+                    </div>
+                    <div class="form-group">
+                            <label for="pincode" class="label">Pincode:</label><br>
+                            <select id="pincode" name="pincode" class="input">
+                                <option value="713364" <% if (preDefinedValues.shipmentInfo.pincode==='713364' )>713364</option>
+                                <option value="713386" <% if (preDefinedValues.shipmentInfo.pincode==='713386' )>713386</option></select><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastOrderShippedOn" class="label">Last Order Shipped On:</label><br>
+                        <input type="text" class="input" id="lastOrderShippedOn" name="lastOrderShippedOn"
+                            value="<%= preDefinedValues.shipmentInfo.lastOrderShippedOn %>" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="redeemCard" class="label">Redeem Card:</label><br>
+                        <input type="text" class="input" id="redeemCard" name="redeemCard"
+                            value="<%= preDefinedValues.shipmentInfo.redeemCard %>" required><br>
+                    </div>
+                    <button type="submit" class="btn">Update Shipment Info</button>
+                </form>
+            </div>
+
+            <div class="Subscription tabShow">
+                <h1>Subscription Information</h1>
+                <h2>Payment Date</h2>
+                <p>December 10,2021 </p>
+                <h2>Date of Next Payment</h2>
+                <p>December 10, 2022</p>
+                <h2>Plan</h2>
+                <p>Yearly</p>
+                <button class="btn">
+                    update
+                </button>
+            </div>
+            <div class="Privacy tabShow">
+                <h1>Privacy Setting</h1>
+                <h2>Manage Email Notification</h2>
+                <p></p>
+                <h2>Manage Privacy Settings</h2>
+                <p></p>
+                <h2>Terms Of Use</h2>
+                <p></p>
+                <button class="btn">
+                    update
+                </button>
+            </div>
+            <div class="settings tabShow">
+                <h1>Account Setting</h1>
+                <h2>Hold Subscription</h2>
+                <p></p>
+                <h2>Cancel Subscription</h2>
+                <p></p>
+                <h2>Your Devices</h2>
+                <p></p>
+                <h2>Referrals</h2>
+                <p></p>
+                <button class="btn">
+                    update
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // // Get all tab elements
+        // const tabs = document.querySelectorAll('.tab');
+
+        // // Get all tab content elements
+        // const tabContents = document.querySelectorAll('.tabShow');
+
+        // // Loop through each tab
+        // tabs.forEach((tab, index) => {
+        //     // Add click event listener to each tab
+        //     tab.addEventListener('click', () => {
+        //         // Remove 'active' class from all tabs
+        //         tabs.forEach((t) => t.classList.remove('active'));
+        //         // Add 'active' class to the clicked tab
+        //         tab.classList.add('active');
+        //         // Hide all tab content
+        //         tabContents.forEach((content) => content.style.display = 'none');
+        //         // Display the corresponding tab content based on the clicked tab index
+        //         tabContents[index].style.display = 'block';
+        //     });
+        // });
+
+        
+// Get all tab elements
+const tabs = document.querySelectorAll('.tab');
+
+// Get all tab content elements
+const tabContents = document.querySelectorAll('.tabShow');
+
+// Get all submit buttons
+const submitButtons = document.querySelectorAll('.btn');
+
+// Loop through each tab
+tabs.forEach((tab, index) => {
+    // Add click event listener to each tab
+    tab.addEventListener('click', () => {
+        // Remove 'active' class from all tabs
+        tabs.forEach((t) => t.classList.remove('active'));
+        // Add 'active' class to the clicked tab
+        tab.classList.add('active');
+        // Hide all tab content
+        tabContents.forEach((content) => content.style.display = 'none');
+        // Display the corresponding tab content based on the clicked tab index
+        tabContents[index].style.display = 'block';
+    });
+});
+
+// Manually set the 'active' class for the Profile tab and show its content
+tabs.forEach((tab, index) => {
+    if (index === 0) {
+        tab.classList.add('active');
+    } else {
+        tab.classList.remove('active');
+    }
+});
+tabContents.forEach((content, index) => {
+    if (index === 0) {
+        content.style.display = 'block';
+    } else {
+        content.style.display = 'none';
+    }
+});
+
+// Loop through each submit button
+submitButtons.forEach((button) => {
+    // Add click event listener to each submit button
+    button.addEventListener('click', () => {
+        // You can perform an action here when the submit button is clicked
+        // For example, you can update user information
+        console.log('Submit button clicked!');
+        // You can add your logic to update user information here
+    });
+});
+
+    </script>
+
+</body>
+
+</html>
