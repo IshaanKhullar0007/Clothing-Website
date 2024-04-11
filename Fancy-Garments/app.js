@@ -7,12 +7,12 @@ const port = process.env.PORT || 7000; // Use the dynamic port assigned by Herok
 
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use('/images', express.static('images'));
-app.use(express.static('C:\\Fancy-Garments'));
+app.use(express.static('Fancy-Garments'));
 
 // Function to load pre-defined values from JSON file
 function loadPreDefinedValues() {
   try {
-    return JSON.parse(fs.readFileSync('C:\\Fancy-Garments/preDefinedValues.json', 'utf8'));
+    return JSON.parse(fs.readFileSync('Fancy-Garments/preDefinedValues.json', 'utf8'));
   } catch (err) {
     console.error('Error loading pre-defined values:', err);
     return {}; // Return empty object in case of error
@@ -29,7 +29,7 @@ app.get('/ProfilePage', (req, res) => {
   const preDefinedValues = loadPreDefinedValues();
   
   // Read the HTML file and serve it as response
-  fs.readFile('C:\\Fancy-Garments/Profile.html', 'utf8', (err, data) => {
+  fs.readFile('Fancy-Garments/Profile.html', 'utf8', (err, data) => {
     if (err) {
       res.status(500).send('Internal Server Error');
       return;
@@ -70,7 +70,7 @@ app.post('/updateProfile', (req, res) => {
   };
 
   // Save updated values to JSON file
-  fs.writeFileSync('C:\\Fancy-Garments/preDefinedValues.json', JSON.stringify(preDefinedValues, null, 2));
+  fs.writeFileSync('Fancy-Garments/preDefinedValues.json', JSON.stringify(preDefinedValues, null, 2));
 
   // Redirect to the form page after successful submission
   res.redirect('/ProfilePage');
@@ -95,7 +95,7 @@ app.post('/updateShipmentInfo', (req, res) => {
   };
 
   // Save updated values to JSON file
-  fs.writeFileSync('C:\\Fancy-Garments/preDefinedValues.json', JSON.stringify(preDefinedValues, null, 2));
+  fs.writeFileSync('Fancy-Garments/preDefinedValues.json', JSON.stringify(preDefinedValues, null, 2));
 
   // Redirect to the form page after successful submission
   res.redirect('/ProfilePage');
