@@ -16,7 +16,7 @@
 }
 
 .logo span{
-    color: #40aa54;
+    color: rgb(255, 140, 0);
 	text-decoration:none;
 }
 .logo{
@@ -38,7 +38,7 @@ body {
 }
 
 .sec {
-    background: #74d88b;
+    background: rgb(255, 140, 0);
     width: 35%;
     position: absolute;
     left:65%;
@@ -49,7 +49,7 @@ body {
 }
 
 .head h1 {
-    color: #78d98f;
+    color: rgb(255, 140, 0);
     text-align: center;
     font-weight: bolder;
     font-size: 2.2em;
@@ -120,7 +120,7 @@ form button {
     width: 70%;
     position: relative;
     color: white;
-    background: #74d88b;
+    background: rgb(255, 140, 0)b;
     border: none;
     font-size: 1em;
     padding: 1.3em 2em;
@@ -186,7 +186,7 @@ form a {
 }
 
 input:focus{
-    background-color: #74d88b;
+    background-color: rgb(255, 140, 0);
 }
 
 #b {
@@ -326,7 +326,7 @@ input:focus{
 }
 
 .sign_in_btn {
-    background-color: #72dd8b;
+    background-color: rgb(255, 140, 0);
     cursor: pointer;
     box-shadow: 9px 10px 10px rgba(0, 3, 9, 0.7);
 
