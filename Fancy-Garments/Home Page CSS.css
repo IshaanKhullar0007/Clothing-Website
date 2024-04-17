@@ -195,8 +195,8 @@ body {
     left: 60%;
     transform: translateX(-60%);
     top: -75px;
-    width: 150px;
-    height: 150px;
+    width: 350px;
+    height: 250px;
     object-position: center;
     object-fit: contain;
 }
