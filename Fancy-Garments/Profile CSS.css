@@ -4,7 +4,9 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
-
+body{
+    background-color:#1b1d1f;
+}
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -31,15 +33,15 @@
 }
 
 body {
-    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    /* background: linear-gradient(120deg, #2980b9, #8e44ad); */
     overflow-x: hidden;
 
 }
 
 .container {
     background: #fff;
-    width: 540px;
-    height: 470px;
+    width: 740px;
+    height: 570px;
     margin: 0 auto;
     position: relative;
     margin-top: 50px;
@@ -49,11 +51,11 @@ body {
 .leftbox {
     float: left;
     top: -5%;
-    left: 5%;
+    left: 3%;
     position: absolute;
-    width: 15%;
-    height: 110%;
-    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    width: 11%;
+    height: 110%;    
+    background-color: rgb(255, 140, 0);
     box-shadow: 3px 3px 10px rgba(119, 119, 119, .5);
     border: .1em solid #fff;
 }
@@ -94,7 +96,7 @@ nav a.active {
 }
 
 h1 {
-    color: #2980b9;
+    color: rgb(229, 193, 146);
     font-size: 1.2rem;
     margin-top: 40px;
     margin-bottom: 35px;
@@ -144,7 +146,7 @@ span {
     font-size: 15px;
     border: 0;
     color: #fff;
-    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    background-color: rgb(255, 140, 0);
     padding: 7px 15px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .2);
     cursor: pointer;
