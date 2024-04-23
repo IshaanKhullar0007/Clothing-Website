@@ -6,7 +6,10 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+body{
+    background-color:#1b1d1f;
+    color: white;
+}
 .navigation{
     display: flex;
     justify-content: space-between;
@@ -40,7 +43,7 @@ body{
 }
 
 .contact-in{
-    width: 80%;
+    width: 40%;
     height: auto;
     margin: auto;
     display: flex;
@@ -48,7 +51,7 @@ body{
     padding: 10px;
     border: 2px solid rgb(95, 95, 95);
     border-radius: 20px;
-    background: #fff;
+    background-color: rgb(225, 216, 205);
     box-shadow: 10px 10px 7px rgba(0, 0, 0, 1);
     /* box-shadow: 9px 7px 7px rgba(0, 3, 9, 0.9); */
 
@@ -70,7 +73,7 @@ body{
     
 }
 .contact-form{
-    background: linear-gradient(130deg,#4a5149,#d4c6da);
+    background-color: rgb(225, 216, 205);
     width: 100%;
     height: auto;
     flex: 50%;
