@@ -6,6 +6,7 @@
     padding: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
 }
 body{
     background-color:#1b1d1f;
@@ -23,14 +24,14 @@ body{
 }
 
 .logo span{
-    color: rgb(255, 140, 0) ;
+    color: #40aa54;
 	text-decoration:none;
 }
 .logo{
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: 1px;
-    color: white;
+    color: #202020;
 	text-decoration:none;
 }
 
@@ -105,12 +106,11 @@ body{
     transition: all ease 0.3s;
     border-radius: 20px;
 }
-
 .product-box .cart-btn i{
     margin-right: 10px;
 }
 .product-box .cart-btn:hover{
-    background-color: #4eb060;
+    background-color: rgb(255, 140, 0);
     color: #ffffff;
     transition: all ease 0.3s;
 }
