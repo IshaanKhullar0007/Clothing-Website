@@ -6,11 +6,14 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+body{
+    background-color:#1b1d1f;
+    color: white;
+}
 .section {
     width: 100%;
     min-height: 100vh;
-	background: #c8efd1;
+	/* background: #c8efd1; */
 }
 
 .container {
