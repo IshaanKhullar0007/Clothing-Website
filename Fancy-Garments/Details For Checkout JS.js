@@ -18,7 +18,7 @@ function validate_form(){
         error_message.innerHTML=text;
         return false;
     }
-    if(isNaN(pincode) || pincode.length !=10){
+    if(isNaN(pincode) || pincode.length !=6){
         text="Please enter a valid Pincode";
         error_message.innerHTML=text;
         return false;
