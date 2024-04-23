@@ -1,12 +1,12 @@
 {
-  "name": "Avinash",
-  "email": "asdsajdi#@gmail.com",
-  "password": "1388425",
+  "name": "Ishaan",
+  "email": "ikhullar157@gmail.com",
+  "password": "123456",
   "gender": "male",
   "shipmentInfo": {
-    "billingAddress": "402, Sector 19, Noida, Uttar Pradesh, India",
-    "pincode": "713364",
-    "lastOrderShippedOn": "January 10, 2024",
+    "billingAddress": "Near Virdi Cold Store Samrala",
+    "pincode": "141114",
+    "lastOrderShippedOn": "June 10, 2024",
     "redeemCard": "hello"
   }
 }
