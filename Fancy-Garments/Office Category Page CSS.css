@@ -6,9 +6,12 @@
     padding: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
 }
-
-
+body{
+    background-color:#1b1d1f;
+    color: white;
+}
 .navigation{
     display: flex;
     justify-content: space-between;
@@ -30,11 +33,6 @@
     letter-spacing: 1px;
     color: #202020;
 	text-decoration:none;
-}
-
-body{
-	background: #c8efd1;
-	overflow: auto;
 }
 
 .fruits-heading {
@@ -64,7 +62,7 @@ body{
     width: 100%;
     border: 3px solid #eeeeee;
     border-radius: 20px;
-    background-color: #ffffff;
+    background-color: rgb(225, 216, 205);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -99,8 +97,8 @@ body{
 .product-box .cart-btn{
     width:100%;
     height: 40px;
-    background-color: #ecf7ee;
-    color: #4eb060;
+    background-color: #3b3b3bcb;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +110,7 @@ body{
     margin-right: 10px;
 }
 .product-box .cart-btn:hover{
-    background-color: #4eb060;
+    background-color: rgb(255, 140, 0);
     color: #ffffff;
     transition: all ease 0.3s;
 }
