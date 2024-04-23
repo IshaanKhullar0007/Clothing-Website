@@ -5,6 +5,10 @@
 	padding:0;
 	box-sizing: border-box;
 }
+body{
+	background-color:#1b1d1f;
+	color: white;
+}
 .navigation{
     display: flex;
     justify-content: space-between;
@@ -17,7 +21,7 @@
 }
 
 .logo span{
-    color: #40aa54;
+    color: rgb(255, 140, 0);
 	text-decoration:none;
 }
 .logo{
@@ -29,7 +33,7 @@
 }
 
 body{
-	background: #c8efd1;
+	/* background: #c8efd1; */
 	overflow:hidden;
 }
 .container{
@@ -51,9 +55,10 @@ body{
 	height: 200px;
 	overflow: hidden;
 	margin-bottom: 20px;
+	border: 2px solid rgb(255, 140, 0);
 }
 .product:hover{
-	border: none;
+	border: 2px solid white;
 	box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 	transform: scale(1.01);
     transition: 0.3s all ease;
@@ -104,7 +109,7 @@ body{
 	margin-left: 20px;
 	padding:20px;
 	height: 240px;
-	border: 1.5px solid black;
+	border: 1.5px solid white;
 	border-radius: 10px;
     height: 270px;
 }
@@ -119,7 +124,7 @@ body{
 	text-align: center;
 	height: 40px;
 	line-height: 40px;
-	background-color: #32b350;
+	background-color: rgb(255, 140, 0);
 	color: white;
 	text-decoration: none;
 }
